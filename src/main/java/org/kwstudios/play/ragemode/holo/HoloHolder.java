@@ -44,8 +44,8 @@ public class HoloHolder {
 			savedHolos = new ArrayList<>();
 		}
 
-		// Bukkit.getConsoleSender().sendMessage(ConstantHolder.RAGEMODE_PREFIX
-		// + "Some idiot tried to change the holos.yml");
+		 Bukkit.getConsoleSender().sendMessage(ConstantHolder.RAGEMODE_PREFIX
+		 + "Some idiot tried to change the holos.yml");
 
 		savedHolos.add(loc);
 		holosConfiguration.set("data.holos", savedHolos);
@@ -84,7 +84,7 @@ public class HoloHolder {
 		visibilityManager.showTo(player);
 		visibilityManager.setVisibleByDefault(false);
 
-		// RetPlayerPoints rpp = null;
+		 RetPlayerPoints rpp = null;
 
 		if (PluginLoader.getInstance().getConfig().getString("settings.global.statistics.type")
 				.equalsIgnoreCase("yaml")) {
@@ -116,7 +116,7 @@ public class HoloHolder {
 
 		if (PluginLoader.getInstance().getConfig().getString("settings.global.statistics.type")
 				.equalsIgnoreCase("mySQL")) {
-			// Bukkit.broadcastMessage(sUUID);
+			 Bukkit.broadcastMessage(sUUID);
 			final Player mySQLPlayer = player;
 			final Hologram mySQLHologram = hologram;
 			Bukkit.getServer().getScheduler().runTaskAsynchronously(PluginLoader.getInstance(), new Runnable() {
