@@ -66,28 +66,28 @@ public class GameTimer {
 			private int totalMessages = timeMillisForLoop / 60000;
 			private int secondsRemaining = timeMillisForLoop / 1000;
 			private int bossBarPointer = 0;
-			// private int totalTimesLooped = 0;
-			// private final long startTimeMillis = System.currentTimeMillis();
+			 private int totalTimesLooped = 0;
+			 private final long startTimeMillis = System.currentTimeMillis();
 
 			public void run() {
 				if (totalMessages > 0 && PlayerList.getPlayersInGame(gameName).length >= 2) {
 
-					// long timeMillisNow = System.currentTimeMillis();
-					// long timeMillisPassed = timeMillisNow - startTimeMillis;
+					 long timeMillisNow = System.currentTimeMillis();
+					 long timeMillisPassed = timeMillisNow - startTimeMillis;
 
-					// if (fullMinute % 1 == 0) {
-					// String[] playerUUIDs =
-					// PlayerList.getPlayersInGame(gameName);
-					// for (int i = 0; i < playerUUIDs.length; i++) {
-					// Bukkit.getPlayer(UUID.fromString(playerUUIDs[i]))
-					// .sendMessage(ConstantHolder.RAGEMODE_PREFIX +
-					// ChatColor.BLUE
-					// + "This round will end in " + ChatColor.YELLOW
-					// + Integer.toString(totalMessages) + ChatColor.BLUE + "
-					// minutes.");
-					// }
-					// totalMessages--;
-					// }
+					 if (fullMinute % 1 == 0) {
+					 String[] playerUUIDs =
+					 PlayerList.getPlayersInGame(gameName);
+					 for (int i = 0; i < playerUUIDs.length; i++) {
+					 Bukkit.getPlayer(UUID.fromString(playerUUIDs[i]))
+					 .sendMessage(ConstantHolder.RAGEMODE_PREFIX +
+					 ChatColor.BLUE
+					 + "This round will end in " + ChatColor.YELLOW
+					 + Integer.toString(totalMessages) + ChatColor.BLUE + "
+					 minutes.");
+					 }
+					 totalMessages--;
+					 }
 					double minutes = Math.floor(secondsRemaining / 60);
 					double seconds = secondsRemaining % 60;
 					secondsRemaining--;
