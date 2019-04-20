@@ -28,8 +28,8 @@ public class MySQLConnector {
 
 		connection = conn;
 
-		// System.out.println("RageMode connected successfully to the
-		// database!");
+		 System.out.println("RageMode connected successfully to the
+		 database!");
 
 		createDefaultTable();
 	}
