@@ -67,13 +67,13 @@ public class EventListener implements Listener {
 	public void onPlayerQuit(PlayerQuitEvent event) {
 		Player player = event.getPlayer();
 
-		// Bukkit.broadcastMessage("Ragemode noticed that " + player.getName() +
-		// " disconnected.");
+		  Bukkit.broadcastMessage("Ragemode noticed that " + player.getName() +
+		 " disconnected.");
 
 		if (PlayerList.isPlayerPlaying(event.getPlayer().getUniqueId().toString())) {
 			if (PlayerList.removePlayer(player)) {
-				// Bukkit.broadcastMessage(player.getName() + " was removed
-				// successfully.");
+				 Bukkit.broadcastMessage(player.getName() + " was removed
+				 successfully.");
 			}
 
 		}
@@ -358,11 +358,11 @@ public class EventListener implements Listener {
 
 			deceased.teleport(spawns.get(x)); // ----> performance optimization
 
-			// deceased.getInventory().clear();
-			// deceased.getInventory().setItem(0, RageBow.getRageBow()); //
-			// deceased.getInventory().setItem(1, RageKnife.getRageKnife()); //
+			 deceased.getInventory().clear();
+			 deceased.getInventory().setItem(0, RageBow.getRageBow()); //
+			 deceased.getInventory().setItem(1, RageKnife.getRageKnife()); //
 			// give him a new set of items
-			// deceased.getInventory().setItem(9, RageArrow.getRageArrow()); //
+			 deceased.getInventory().setItem(9, RageArrow.getRageArrow()); //
 			deceased.getInventory().setItem(2, CombatAxe.getCombatAxe());
 
 		}
