@@ -259,17 +259,17 @@ public class PlayerList {
 			while (i < imax) {
 				if (list[i] != null) {
 					if (list[i].equals(player.getUniqueId().toString())) {
-						// TabGuiUpdater.removeTabForPlayer(player);
+						 TabGuiUpdater.removeTabForPlayer(player);
 
-						// org.mcsg.double0negative.tabapi.TabAPI.disableTabForPlayer(player);
-						// org.mcsg.double0negative.tabapi.TabAPI.updatePlayer(player);
+						 org.mcsg.double0negative.tabapi.TabAPI.disableTabForPlayer(player);
+						 org.mcsg.double0negative.tabapi.TabAPI.updatePlayer(player);
 
-						// if(ScoreBoard.allScoreBoards.containsKey(PlayerList.getPlayersGame(player)))
-						// ScoreBoard.allScoreBoards.get(PlayerList.getPlayersGame(player)).removeScoreBoard(player);
+						 if(ScoreBoard.allScoreBoards.containsKey(PlayerList.getPlayersGame(player)))
+						 ScoreBoard.allScoreBoards.get(PlayerList.getPlayersGame(player)).removeScoreBoard(player);
 
 						RageScores.removePointsForPlayers(new String[] { player.getUniqueId().toString() });
 
-						// BossbarLib.getHandler().clearBossbar(player);
+						 BossbarLib.getHandler().clearBossbar(player);
 
 						player.getInventory().clear();
 						String message = ConstantHolder.RAGEMODE_PREFIX + ChatColor.translateAlternateColorCodes('§',
