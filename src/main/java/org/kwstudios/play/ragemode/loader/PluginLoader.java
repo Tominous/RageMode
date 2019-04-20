@@ -47,12 +47,12 @@ import com.google.gson.Gson;
 
 import net.md_5.bungee.api.ChatColor;
 
-/*import com.comphenix.protocol.PacketType;
+import com.comphenix.protocol.PacketType;
 import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.ProtocolManager;
 import com.comphenix.protocol.events.ListenerPriority;
 import com.comphenix.protocol.events.PacketAdapter;
-import com.comphenix.protocol.events.PacketEvent;*/
+import com.comphenix.protocol.events.PacketEvent;
 
 public class PluginLoader extends JavaPlugin {
 
@@ -61,7 +61,7 @@ public class PluginLoader extends JavaPlugin {
 	private static Messages messages = null;
 	private static boolean holographicDiaplaysAvailable = false;
 	private static Set<String> inGameCommands = null;
-	// private ProtocolManager protocolManager;
+	 private ProtocolManager protocolManager;
 
 	@Override
 	public void onEnable() {
@@ -96,8 +96,8 @@ public class PluginLoader extends JavaPlugin {
 
 		logger.info(pluginDescriptionFile.getName() + " was loaded successfully! (Version: "
 				+ pluginDescriptionFile.getVersion() + ")");
-		// getConfig().options().copyDefaults(true);
-		// saveConfig();
+		 getConfig().options().copyDefaults(true);
+		 saveConfig();
 		new PlayerList(getConfig());
 		new EventListener(this, getConfig());
 
@@ -149,7 +149,7 @@ public class PluginLoader extends JavaPlugin {
 		PluginDescriptionFile pluginDescriptionFile = getDescription();
 		Logger logger = Logger.getLogger("Minecraft");
 
-		// StopGame.stopAllGames(getConfig(), logger);
+		 StopGame.stopAllGames(getConfig(), logger);
 
 		Thread thread = new Thread(new Runnable() {
 			@Override
