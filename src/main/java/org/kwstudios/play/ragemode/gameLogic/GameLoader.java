@@ -37,10 +37,10 @@ public class GameLoader {
 		checkTeleport();
 		setInventories();
 		List<String> players = Arrays.asList(PlayerList.getPlayersInGame(gameName));
-		// TabGuiUpdater.setTabGui(players);
-		// TabAPI.setTabGuiListOverLayForPlayers(players);
+		 TabGuiUpdater.setTabGui(players);
+		 TabAPI.setTabGuiListOverLayForPlayers(players);
 
-		// TabAPI.setTab(players, "Test", 0, 0);
+		 TabAPI.setTab(players, "Test", 0, 0);
 
 		ScoreBoard gameBoard = new ScoreBoard(players, true);
 		gameBoard.setTitle(ConstantHolder.SCOREBOARD_DEFAULT_TITLE);
