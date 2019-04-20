@@ -1,8 +1,8 @@
 package org.kwstudios.play.ragemode.gameLogic;
 
-//import com.gmail.zahusek.tinyprotocolapi.api.tabapi.TabAPI;
+import com.gmail.zahusek.tinyprotocolapi.api.tabapi.TabAPI;
 
-public class TabGuiUpdater {/*
+public class TabGuiUpdater {
 
 	public static void setTabGui(List<String> playerUUIDs) {
 		for (String playerUUID : playerUUIDs) {
@@ -77,6 +77,6 @@ public class TabGuiUpdater {/*
 		TabAPI.setTabSlot(player, 0, 4, ChatColor.translateAlternateColorCodes('&', "&6&lPoints"), 100);
 		TabAPI.setTabSlot(player, 1, 4, ChatColor.translateAlternateColorCodes('&', "&6&lPlayer"), 100);
 		TabAPI.setTabSlot(player, 2, 4, ChatColor.translateAlternateColorCodes('&', "&6&lKills - Deaths"), 100);
-	}*/
+	}
 
 }
